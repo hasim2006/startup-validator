@@ -6,8 +6,9 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Launchpad — Discover, validate, and refine startup ideas",
-  description: "A startup community platform to discover, validate, and refine your best ideas.",
+  title: "Hasim Office Solutions | Office Portfolio",
+  description:
+    "A modern office portfolio website for Hasim Office Solutions showcasing services, projects, testimonials, and contact details.",
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
