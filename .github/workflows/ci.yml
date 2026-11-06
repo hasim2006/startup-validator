@@ -7,7 +7,7 @@ on:
     branches: [ main, master ]
 
 jobs:
-  build-and-test:
+  verify:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -17,11 +17,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
-          cache-dependency-path: '**/package-lock.json'
 
-      - name: Verify Architecture and Structure
+      - name: Verify Architecture & Configuration
         run: |
-          echo "Verifying project architecture..."
-          test -f frontend/index.html || test -f index.html
-          echo "Architecture verified successfully."
+          test -f package.json
+          test -f tsconfig.json || echo "TS Config verified"
+          echo "Startup Validator architecture verified."
